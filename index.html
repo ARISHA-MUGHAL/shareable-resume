@@ -11,22 +11,15 @@
     <div class="resume-container">
         <!-- Header -->
         <header class="header">
-            <div class="header-content">
-                <div class="name-section">
-                    <h1>Aqib Sheikh</h1>
-                    <p>Food Technologist | Quality Control Specialist</p>
-                </div>
-                <div class="profile-picture-section">
-                    <div class="profile-picture-wrapper">
-                        <img id="displayPicture" class="profile-picture" src="#" alt="Profile Picture">
-                        <span class="profile-picture-text">Profile Picture</span>
-                    </div>
-                    <input type="file" id="profilePictureInput" accept="image/*" onchange="uploadProfilePicture()" class="upload-btn">
-                    <label for="profilePictureInput" class="upload-label">Choose File</label>
-                </div>
+            <div class="header-left">
+                <h1 id="name">Aqib Sheikh</h1>
+                <p id="title">Food Technologist</p>
+            </div>
+            <div class="header-right">
+                <img id="displayPicture" class="profile-picture" src="placeholder.jpg" alt="Profile Picture">
+                <input type="file" id="profilePictureInput" onchange="uploadProfilePicture()" accept="image/*" />
             </div>
         </header>
-
         <!-- Main Content -->
         <div class="content">
             <!-- Left Column: Education, Expertise, Hobbies, Languages -->
