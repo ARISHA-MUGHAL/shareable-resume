@@ -1,0 +1,123 @@
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5; /* Light grey background */
+    color: #333;
+}
+
+/* Header Styling */
+.header {
+    background-color: #1a1f71; /* Dark blue */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.upload-btn {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+}
+
+.upload-label {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffffff; /* White background for the button */
+    color: #1a1f71; /* Dark blue text */
+    border: 2px solid #1a1f71; /* Dark blue border */
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+.profile-picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #ccc; /* Grey border */
+    margin-right: 20px;
+    object-fit: cover;
+    display: inline-block;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+/* Resume Container */
+.resume-container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #e0f7fa; /* Light blue background */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Column Styling */
+.left-column, .right-column {
+    width: 45%;
+    display: inline-block;
+    vertical-align: top;
+    padding: 20px;
+}
+
+.left-column h2, .right-column h2 {
+    border-bottom: 2px solid #1a1f71; /* Dark blue underline */
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.left-column p, .right-column p {
+    margin: 0;
+    padding: 10px 0;
+}
+
+/* Contact Information Styling */
+.right-column p {
+    padding: 5px 0;
+}
+
+.right-column p strong {
+    color: #1a1f71; /* Dark blue text for labels */
+}
+
+/* Controls Styling */
+.controls {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.controls button {
+    margin: 5px;
+    padding: 10px 15px;
+    background-color: #1a1f71; /* Dark blue button */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.controls button:hover {
+    background-color: #094a94;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .left-column, .right-column {
+        width: 100%;
+        display: block;
+        padding: 10px;
+    }
+}

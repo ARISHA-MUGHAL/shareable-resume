@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional CV</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="resume-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="name-section">
+                    <h1>Aqib Sheikh</h1>
+                    <p>Food Technologist | Quality Control Specialist</p>
+                </div>
+                <div class="profile-picture-section">
+                    <div class="profile-picture-wrapper">
+                        <img id="displayPicture" class="profile-picture" src="#" alt="Profile Picture">
+                        <span class="profile-picture-text">Profile Picture</span>
+                    </div>
+                    <input type="file" id="profilePictureInput" accept="image/*" onchange="uploadProfilePicture()" class="upload-btn">
+                    <label for="profilePictureInput" class="upload-label">Choose File</label>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="content">
+            <!-- Left Column: Education, Expertise, Hobbies, Languages -->
+            <div class="left-column">
+                <h2>Education</h2>
+                <p>Bachelor's in Food Technology, ABC University</p>
+                
+                <h2>Expertise</h2>
+                <div id="expertiseSection">
+                    <p>Food Safety, Quality Assurance, Product Development</p>
+                </div>
+                
+                <h2>Hobbies & Languages</h2>
+                <p>Cooking, Reading, English, Urdu</p>
+            </div>
+
+            <!-- Right Column: About, Work Experience, Projects, Contact Information -->
+            <div class="right-column">
+                <h2>About</h2>
+                <p>Detail-oriented Food Technologist with extensive experience in quality control and product development...</p>
+                
+                <h2>Work Experience</h2>
+                <p>Senior Food Technologist at XYZ Foods (2018-Present)</p>
+                <p>Food Quality Specialist at ABC Corp (2015-2018)</p>
+
+                <h2>Projects</h2>
+                <p>Developed a new line of organic snacks, Implemented a new quality control system...</p>
+                
+                <h2>Skills</h2>
+                <div id="skillsSection">
+                    <p>Food Safety Standards, Sensory Evaluation, HACCP</p>
+                </div>
+
+                <h2>Contact Information</h2>
+                <p><strong>Email:</strong> aqib.sheikh@example.com</p>
+                <p><strong>Phone:</strong> +123 456 7890</p>
+            </div>
+        </div>
+        
+        <!-- Controls -->
+        <div class="controls">
+            <button onclick="toggleVisibility('skillsSection')">Toggle Skills</button>
+            <button onclick="toggleVisibility('expertiseSection')">Toggle Expertise</button>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
