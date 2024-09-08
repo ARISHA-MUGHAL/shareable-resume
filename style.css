@@ -1,161 +1,151 @@
-/* Global Styles */
 body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #e6f2ff; /* Light blue background */
+    color: #333;
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
-    background-color: #f5f5f5; /* Light grey background */
-    color: #333;
 }
 
-/* Header Styling */
-/* Header styling */
+.resume-container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #003366; /* Dark blue border */
+}
+
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: darkblue;
-    padding: 20px;
-    color: white;
+    margin-bottom: 20px;
+    background-color: #003366; /* Dark blue header */
+    color: #fff;
+    padding: 10px;
+    border-radius: 8px;
 }
 
-.header-left {
-    display: flex;
-    flex-direction: column;
-}
-
-.header-left h1 {
-    font-size: 24px;
+.header-left h1, .header-left p {
     margin: 0;
-    font-family: sans-serif;
-}
-
-.header-left p {
-    font-size: 16px;
-    margin: 0;
-    font-family: sans-serif;
 }
 
 .header-right {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative; /* Ensure positioning for file input */
 }
 
 .profile-picture {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid lightblue;
+    margin-bottom: 10px;
+    border: 2px solid #003366; /* Dark blue border around picture */
 }
 
-input[type="file"] {
-    margin-top: 10px;
+.file-input-hidden {
+    display: none; /* Hide default file input */
+}
+
+.black-button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
     cursor: pointer;
-}
-
-.upload-btn {
-    position: absolute;
-    left: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-    opacity: 0;
-    z-index: 2;
-}
-
-.upload-label {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #ffffff; /* White background for the button */
-    color: #1a1f71; /* Dark blue text */
-    border: 2px solid #1a1f71; /* Dark blue border */
+    margin-bottom: 10px;
     border-radius: 4px;
+    font-size: 14px;
+}
+
+.black-button:hover {
+    background-color: #333;
+}
+
+.choose-file-container {
+    position: absolute;
+    bottom: 10px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-column, .right-column {
+    width: 48%;
+}
+
+h2 {
+    color: #003366; /* Dark blue for section headers */
+    border-bottom: 2px solid #003366; /* Blue line under each header */
+    padding-bottom: 5px;
+}
+
+.controls {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.red-button {
+    background-color: #d9534f;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
     cursor: pointer;
-    margin-right: 20px;
-    font-weight: bold;
+    border-radius: 4px;
+    font-size: 14px;
 }
 
-.profile-picture {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    border: 2px solid #ccc; /* Grey border */
-    margin-right: 20px;
-    object-fit: cover;
-    display: inline-block;
+.red-button:hover {
+    background-color: #c9302c;
 }
 
-.header h1 {
-    margin: 0;
-    font-size: 2.5rem;
-}
-
-/* Resume Container */
-.resume-container {
-    max-width: 900px;
+.form-container {
+    max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    background-color: #e0f7fa; /* Light blue background */
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: none;
+    background-color: #fff;
+    border: 2px solid #003366; /* Dark blue border */
 }
 
-/* Column Styling */
-.left-column, .right-column {
-    width: 45%;
-    display: inline-block;
-    vertical-align: top;
-    padding: 20px;
-}
-
-.left-column h2, .right-column h2 {
-    border-bottom: 2px solid #1a1f71; /* Dark blue underline */
-    padding-bottom: 5px;
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container input[type="tel"],
+.form-container textarea {
+    width: calc(100% - 20px);
     margin-bottom: 10px;
-    font-size: 1.5rem;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
 }
 
-.left-column p, .right-column p {
-    margin: 0;
-    padding: 10px 0;
-}
-
-/* Contact Information Styling */
-.right-column p {
-    padding: 5px 0;
-}
-
-.right-column p strong {
-    color: #1a1f71; /* Dark blue text for labels */
-}
-
-/* Controls Styling */
-.controls {
+.generate-container {
     text-align: center;
     margin-top: 20px;
 }
 
-.controls button {
-    margin: 5px;
+.generate-container .red-button {
+    margin-top: 10px;
+}
+.button {
     padding: 10px 15px;
-    background-color: #1a1f71; /* Dark blue button */
-    color: #fff;
+    margin: 10px;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
 }
 
-.controls button:hover {
-    background-color: #094a94;
+.blue-button {
+    background-color: #007bff;
+    color: white;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .left-column, .right-column {
-        width: 100%;
-        display: block;
-        padding: 10px;
-    }
+.blue-button:hover {
+    background-color: #0056b3;
 }

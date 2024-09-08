@@ -3,69 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional CV</title>
+    <title>Dynamic Resume Builder</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Resume Template -->
     <div class="resume-container">
-        <!-- Header -->
         <header class="header">
             <div class="header-left">
-                <h1 id="name">Aqib Sheikh</h1>
-                <p id="title">Food Technologist</p>
+                <h1 id="name">Your Name</h1>
+                <p id="title">Your Title</p>
             </div>
             <div class="header-right">
                 <img id="displayPicture" class="profile-picture" src="placeholder.jpg" alt="Profile Picture">
-                <input type="file" id="profilePictureInput" onchange="uploadProfilePicture()" accept="image/*" />
+                <input type="file" id="profilePictureInput" class="file-input-hidden" onchange="uploadProfilePicture()" accept="image/*">
+                <button class="black-button" onclick="document.getElementById('profilePictureInput').click()">Choose File</button>
             </div>
         </header>
-        <!-- Main Content -->
         <div class="content">
-            <!-- Left Column: Education, Expertise, Hobbies, Languages -->
+            <!-- Left Column -->
             <div class="left-column">
                 <h2>Education</h2>
-                <p>Bachelor's in Food Technology, ABC University</p>
-                
+                <p id="resume-education">Your Education Details</p>
                 <h2>Expertise</h2>
-                <div id="expertiseSection">
-                    <p>Food Safety, Quality Assurance, Product Development</p>
-                </div>
-                
+                <p id="resume-expertise">Your Expertise Details</p>
                 <h2>Hobbies & Languages</h2>
-                <p>Cooking, Reading, English, Urdu</p>
+                <p id="resume-hobbies">Your Hobbies and Languages</p>
             </div>
-
-            <!-- Right Column: About, Work Experience, Projects, Contact Information -->
+            <!-- Right Column -->
             <div class="right-column">
                 <h2>About</h2>
-                <p>Detail-oriented Food Technologist with extensive experience in quality control and product development...</p>
-                
+                <p id="resume-about">About Yourself...</p>
                 <h2>Work Experience</h2>
-                <p>Senior Food Technologist at XYZ Foods (2018-Present)</p>
-                <p>Food Quality Specialist at ABC Corp (2015-2018)</p>
-
+                <p id="resume-work-experience">Your Work Experience Details</p>
                 <h2>Projects</h2>
-                <p>Developed a new line of organic snacks, Implemented a new quality control system...</p>
-                
+                <p id="resume-projects">Your Projects</p>
                 <h2>Skills</h2>
-                <div id="skillsSection">
-                    <p>Food Safety Standards, Sensory Evaluation, HACCP</p>
-                </div>
-
+                <p id="resume-skills">Your Skills</p>
                 <h2>Contact Information</h2>
-                <p><strong>Email:</strong> aqib.sheikh@example.com</p>
-                <p><strong>Phone:</strong> +123 456 7890</p>
+                <p id="resume-email"><strong>Email:</strong> your.email@example.com</p>
+                <p id="resume-phone"><strong>Phone:</strong> +123456789</p>
             </div>
         </div>
-        
-        <!-- Controls -->
+        <!-- Control Buttons -->
         <div class="controls">
-            <button onclick="toggleVisibility('skillsSection')">Toggle Skills</button>
-            <button onclick="toggleVisibility('expertiseSection')">Toggle Expertise</button>
+            <button id="editButton" class="red-button" onclick="toggleEdit()">Edit Resume</button>
         </div>
     </div>
 
+    <!-- Form Section -->
+    <div id="form-section" class="form-container" style="display: none;">
+        <form>
+            <!-- Form Inputs -->
+            <input type="text" id="nameInput" placeholder="Enter Name">
+            <input type="text" id="titleInput" placeholder="Enter Title">
+            <input type="text" id="educationInput" placeholder="Enter Education">
+            <input type="text" id="expertiseInput" placeholder="Enter Expertise">
+            <input type="text" id="hobbiesInput" placeholder="Enter Hobbies">
+            <textarea id="aboutInput" placeholder="Enter About"></textarea>
+            <textarea id="workExperienceInput" placeholder="Enter Work Experience"></textarea>
+            <textarea id="projectsInput" placeholder="Enter Projects"></textarea>
+            <input type="text" id="skillsInput" placeholder="Enter Skills">
+            <input type="email" id="emailInput" placeholder="Enter Email">
+            <input type="tel" id="phoneInput" placeholder="Enter Phone">
+            <!-- Buttons -->
+            <button type="button" class="red-button" onclick="updateResume()">Update Changes</button>
+        </form>
+    </div>
+
+    <!-- Generate Resume Button -->
+    <div id="generateButtonSection" class="generate-container">
+        <button class="red-button" onclick="showForm()">Generate Resume</button>
+    </div>
+
+    <!-- Export and Share Buttons -->
+    <div class="controls">
+        <button id="exportPDFBtn" class="button blue-button">Save as PDF</button>
+        <button id="exportPNGBtn" class="button blue-button">Save as PNG</button>
+        <button id="generateURLBtn" class="button blue-button">Generate Shareable URL</button>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <!-- Main Script -->
     <script src="main.js"></script>
 </body>
 </html>
